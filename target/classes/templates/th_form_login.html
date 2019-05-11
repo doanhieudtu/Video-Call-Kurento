@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<th:block th:fragment="form-login">
+	<form  th:action="@{/handler-login}"  method="POST">
+		<div class="form-group">
+			<input type="email" name="email" class="form-control" placeholder="Nhập Email " />
+		</div>
+		<div class="form-group">
+			<input type="password" name="password" class="form-control" placeholder="Nhập mật khẩu"/>
+		</div>
+		 <p th:if="${param.error}" class="error">
+            email và password không hợp lệ.
+        </p>
+		<input type="submit" class="btnRegister"  value="Đăng Nhập"/>
+	</form>
+</th:block>
+</body>
+</html>

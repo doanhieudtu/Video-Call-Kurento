@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: Kurento Java Tutorial - Group Call
+Implementation-Version: 2.1.1.RELEASE
+Built-By: DELL
+Implementation-Vendor-Id: org.springframework.boot
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/kurento-group-call
+Created-By: Maven Integration for Eclipse
+Main-Class: org.kurento.tutorial.groupcall.GroupCallApp
+

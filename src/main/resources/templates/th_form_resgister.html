@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<th:block th:fragment="form-register">
+	<form  th:action="@{/register}" th:object="${userForm}" method="POST">
+		<div class="form-group">
+			<input type="email" th:field="*{email}" class="form-control" placeholder="Nhập Email " value="" />
+		</div>
+		<label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
+		<div class="form-group">
+			<input type="password" th:field="*{password}" class="form-control" placeholder="Nhập mật khẩu" value="" />
+		</div>
+			<label th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></label>
+		<div class="form-group">
+			<input type="password" th:field="*{passwordConfirm}" class="form-control"  placeholder="Nhập lại mật khẩu" value="" />
+		</div>
+			<div> <span th:if="${#fields.hasErrors('passwordConfirm')}" th:errors="*{passwordConfirm}"></span></div>
+		<input type="submit" class="btnRegister"  value="Đăng Kí"/>
+	</form>
+</th:block>
+</body>
+</html>

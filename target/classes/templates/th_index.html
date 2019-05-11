@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org" >
+<head>
+	<meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/header.css}"/>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+		<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img id="icon-kurento" th:src="@{/image/kurento-white.png}"  alt=""/>
+                        <h3>Free Video Call</h3>
+                        <p>Hỗ trợ người dùng video call miễn phí !</p>
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="./register" role="tab" aria-controls="home" aria-selected="true">Đăng Kí</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="./login" role="tab" aria-controls="profile" aria-selected="false">Đăng Nhập</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Đăng Kí Tài Khoản</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                         <img id="image-index" th:src="@{/image/index-image.png}"  alt=""/>
+                                    </div>
+                                    <div class="col-md-6">
+										<th:block th:replace="th_form_resgister"/>
+									</div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <h3  class="register-heading">Apply as a Hirer</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                       
+                                    </div>
+                                    <div class="col-md-6">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>

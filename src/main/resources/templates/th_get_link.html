@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org" >
+<head>
+	<meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/header.css}"/>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/get_link.js"></script>
+</head>
+<body>
+		<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img id="icon-kurento" th:src="@{/image/kurento-white.png}" alt=""/>
+                        <h3>Free Video Call</h3>
+                        <p>Hỗ trợ người dùng video call miễn phí !</p>
+                        <input type="submit" class="btnRegister"  value="Đăng Xuất"/>
+                    </div>
+                    <div class="col-md-9 register-right">
+                    	<div id="email" th:text="${email}" style="display: none"></div>
+                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="email-tab" data-toggle="tab" href="./work" role="tab" aria-controls="home" aria-selected="true" th:text="${email}"></a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Tạo cuộc hội thoại</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                      <label for="basic-url" >Liên kết cuộc hội thoại</label>
+                                      <div class="input-group-prepend">
+  											<textarea  id="content-link" class="form-control" ></textarea>
+									  </div>
+									  <input type="submit" id="get_link" class="btnRegister"  value="Tạo cuộc hội thoại"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                    	<label for="basic-url">Chia sẽ liên kết cuộc hội thoại qua email</label>
+										 <table id="myTable" class=" table order-list">
+										    <thead>
+										        <tr>
+										            <td>Email</td>
+										        </tr>
+										    </thead>
+										    <tbody>
+										        <tr >
+										            <td class="col-sm-4">
+										                <input type="email" name="Email" class="form-control email" />
+										            </td>
+										        </tr>
+										    </tbody>
+										    <tfoot>
+										        <tr>
+										            <td colspan="5" style="text-align: left;">
+										                <input type="button" class="btn btn-block " id="addrow" value="Thêm" />
+										            </td>
+										        </tr>
+										        <tr>
+										        </tr>
+										    </tfoot>
+										</table>
+										<p/>
+										<label id="messaageAdd" style="color: red;"></label>
+										<input type="submit" id="shareLink" class="btnRegister"  value="Chia sẽ liên kết"/>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>
